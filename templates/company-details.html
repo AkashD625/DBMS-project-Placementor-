@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Details Form</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='company-details.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Company details</h1>
+      <h2>verify once before you submit</h2>
+      <form action="{{ url_for('submit') }}" method="post">
+        <!-- <div class="tabs">
+          <input type="radio" id="sales" name="tab" checked />
+          <label for="sales">Sales Support</label>
+          <input type="radio" id="user" name="tab" />
+          <label for="user">User Support</label>
+          <input type="radio" id="else" name="tab" />
+          <label for="else">Something Else</label>
+        </div> -->
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name of the company*"
+            required
+          />
+          <input
+            type="text"
+            name="title"
+            placeholder="Type of the company*"
+            required
+          />
+          <textarea
+            name="company"
+            placeholder="Company details*"
+            required
+            rows="8"
+          ></textarea>
+
+          <label for="employer">Minimum cgpa required</label>
+<select id="employer" name="type" required>
+  <option value="Null">Select Type</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option> 
+  <option value="9">9</option>
+  <option value="Equal to 10">10</option>
+          <input type="text" name="email" placeholder="Job Post" />
+          <input type="text" name="phone" placeholder="Required Skills*" required />
+          <textarea name="message" placeholder="Message for student" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <button class="back-button" onclick=window.location.href='{{ url_for('admin_home') }}'>
+        Back
+    </button>
+      <div class="contact-info">
+        <p>College use only</p>
+        <p>For any query,</p>
+        <p>visit company career portal</p>
+        <p>PHONE</p>
+        <p>6598452365</p>
+      </div>
+    </div>
+  </body>
+</html>

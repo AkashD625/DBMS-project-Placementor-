@@ -1,0 +1,78 @@
+body {
+  background-image: url("images/b.png");
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.ptext{
+  color: black;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 5px 30px 5px rgb(187, 0, 255);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.company-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 2px 5px 30px 5px rgb(1, 14, 255);
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 1.25em;
+}
+
+.card-text {
+  margin: 10px 0 0;
+  font-size: 1em;
+}
+
+.back-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.back-button .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button .btn:hover {
+  background-color: #218838;
+}

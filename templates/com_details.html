@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company List</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='com_details.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Company List</h1>
+      <p class="ptext">All companies coming this year</p>
+      <div class="company-grid">
+        {% for company in companies %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ company[0] }}</h5>
+            <p class="card-text">{{ company[1] }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="text-center back-button">
+        <a href="{{ url_for('student2') }}" class="btn">Go Back</a>
+      </div>
+    </div>
+  </body>
+</html>

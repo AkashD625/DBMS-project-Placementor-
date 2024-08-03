@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='company-results.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search Results</h1>
+      <ul class="results-list">
+        {% for result in results %}
+        <li>
+          <h2>{{ result.company_name }}</h2>
+          <p>{{ result.jobpost }}</p>
+          <button type="button">Apply</button>
+        </li>
+        {% endfor %}
+      </ul>
+      <button
+        type="button">
+        <a href="{{ url_for('student2') }}" class="btn">Go Back</a>
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+/* Existing CSS code */
+
+/* General body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #4d9ed4, #8e44ad);
+  transition: opacity 1s ease-out;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Account box styling */
+.account-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px; /* Adjust width */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading and paragraph styling */
+.account-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.account-box p {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Textbox styling */
+.textbox {
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+}
+
+.textbox input::placeholder {
+  color: #aaa;
+}
+
+/* Enroll checkbox styling */
+.enroll {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.enroll input {
+  margin-right: 10px;
+}
+
+.enroll label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 1;
+}
+
+.btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Links styling */
+.account-box a {
+  color: #2575fc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.account-box a:hover {
+  color: #6a11cb;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style1.css') }}"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Welcome {{ username }}!</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="https://www.forbes.com/top-digital-companies/list/#tab:rank"
+            >Companies</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.newsweek.com/25-free-websites-learn-new-skills-youtube-1617923"
+            target="_blank"
+            >Technologies</a
+          >
+        </li>
+        <li><a href="https://www.geeksforgeeks.org/placements-gq/">More</a></li>
+        <li><a href="{{ url_for('index') }}">Logout</a></li>
+      </ul>
+      <button class="help-button"><a href="#">Help</a></button>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="header-content">
+          <div class="logo">PLACEMENTOR WEB</div>
+          <div class="sub-title">Placement related query</div>
+        </div>
+      </header>
+
+      <div class="welcome-message">
+        <h1>“Empowering futures through seamless placement management.”</h1>
+        <p>
+          Your gateway to a world of opportunities and resources. Explore,
+          Learn, and Grow!
+        </p>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <a href="{{ url_for('com_job') }}">
+            <img
+              src="{{ url_for('static', filename='images/myreq.jpg') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>Company with Job Post</h3>
+              <p>See for what job post company is looking for.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="{{ url_for('search_form') }}">
+            <!-- Change this line -->
+            <img
+              src="{{ url_for('static', filename='images/rols.jpg') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>Company with required skills</h3>
+              <p>
+                Verify your skills for the perticuler company and increase the
+                chance of getting hired.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="{{ url_for('prev_details') }}">
+            <img
+              src="{{ url_for('static', filename='images/tech.jpg') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>Previous year placement</h3>
+              <p>Check your college previous year placement record.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="{{ url_for('company_list') }}">
+            <img
+              src="{{ url_for('static', filename='images/com.jpg') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>All Companies</h3>
+              <p>Company coming for this year for reqrutment.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.coursera.org/en-IN" target="_blank">
+            <img
+              src="{{ url_for('static', filename='images/Skills.jpeg') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>Learn Skills</h3>
+              <p>
+                Lern various skills and increase the chance of getting hired.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://in.linkedin.com/" target="_blank">
+            <img
+              src="{{ url_for('static', filename='images/ex-more.jpg') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>Linkdin link</h3>
+              <p>Explore more opportunities, shape your future.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.hackerrank.com/" target="_blank">
+            <img
+              src="{{ url_for('static', filename='images/cc.png') }}"
+              alt="Card image"
+            />
+            <div class="card-text">
+              <h3>Coding Competitions</h3>
+              <p>Participate and win certificates.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #000000;
+}
+
+.account-list {
+  list-style: circle;
+  padding: 0;
+}
+
+.account-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.remove-form {
+  margin: 0;
+}
+
+.remove-form button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-form button:hover {
+  background: #c0392b;
+}
+
+.messages {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #e74c3c;
+}
+
+.messages li {
+  margin-bottom: 5px;
+}

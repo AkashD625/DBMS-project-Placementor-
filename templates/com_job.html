@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='company-results.css') }}">
+    <title>Company Skills</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Company Required Skills</h1>
+        
+        <!-- Back button -->
+        <div class="back-button">
+            <a href="{{ url_for('student_home') }}">&#8592; Back</a>
+        </div>
+
+        <div class="card-container">
+            {% for company in companies %}
+                <div class="card">
+                  <h5>Company: {{ company[0] }}</h5>
+                  <p>Job post: {{ company[1] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

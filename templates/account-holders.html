@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Holders</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='account-holders.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Website Account Holders</h1>
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %}
+      <ul class="account-list">
+        {% for account in accounts %}
+        <li>
+          {{ account[1] }}
+          <form
+            action="{{ url_for('remove_account', username=account[1]) }}"
+            method="post"
+            class="remove-form"
+          >
+            <button type="submit">Remove</button>
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+      <button>
+        <a href="{{ url_for('admin_home') }}" class="button">Back</a>
+      </button>
+    </div>
+  </body>
+</html>
